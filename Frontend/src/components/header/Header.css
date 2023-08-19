@@ -1,0 +1,48 @@
+.headercontainer {
+    display: flex;
+    color: purple;
+  }
+  
+  .ul {
+    display: flex;
+    text-decoration: none;
+    padding: 0px 6px;
+    margin-top: 22px;
+  }
+  
+  .ul li {
+    list-style: none;
+    padding-inline: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    font-size: 22px;
+  }
+  
+  .ul li:hover {
+    color: rgb(7, 7, 10);
+  }
+  
+  .one img {
+    height: 75px;
+    width: 145px;
+    padding-left: 60px;
+    transition: transform 0.3s ease-in-out;
+    padding-top: 0px;
+  }
+  
+  .one img:hover {
+    transform: scale(1.2);
+  }
+  
+  .vertical {
+    border-left: 2px solid black;
+    height: 40px;
+    margin-left: 150px;
+    margin-top: 18px;
+    transition: height 0.3s ease-in-out;
+  }
+  
+  .vertical:hover {
+    height: 60px;
+  }
+  
