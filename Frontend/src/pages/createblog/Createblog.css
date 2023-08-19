@@ -1,0 +1,43 @@
+.create-blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.create-blog-container h1 {
+  text-align: center;
+  color: purple;
+  margin-bottom: 20px;
+}
+
+.create-blog-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.create-blog-container input[type="text"],
+.create-blog-container textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.create-blog-container input[type="file"] {
+  padding: 10px;
+}
+
+.create-blog-container button {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.create-blog-container button:hover {
+  background-color: #5a4dff;
+}

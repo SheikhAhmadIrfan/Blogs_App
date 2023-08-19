@@ -1,0 +1,54 @@
+.homecontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.homemain {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    gap: 15px;
+}
+
+.homemain img {
+    width: 27rem;
+    border-radius: 50px;
+}
+
+.homesearch {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.homesearch input {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.homesearch button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.homesearch button:hover {
+    background-color: #0056b3;
+}
+.homecontainer h1{
+    text-align: center;
+    color: purple;
+}
+.homecard{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin-left: 10px;
+}
