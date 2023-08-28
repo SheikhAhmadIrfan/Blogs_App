@@ -1,11 +1,27 @@
 import "./Signup.css";
 import logo from "../../assets/logo.jpg";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 const Signup = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const handlesignup = () => {
-    navigate('/login');
+  const handlesignup = async (e) => {
+    e.preventDefault()
+    const data={
+      name:name,
+      username:email,
+      password:password
+    }
+    try {
+      await axios.post("http://localhost:8000/signup", data);
+      navigate("/login");
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
   return (
     <div className="logincontainer">
@@ -13,7 +29,7 @@ const Signup = () => {
         <div className="signupimg">
           <img src={logo} alt="" />
         </div>
-        <form>
+        <form onSubmit={handlesignup}>
           <div className="emailopt">
             <label htmlFor="text" className="labellogin">
               Enter Name
@@ -23,6 +39,7 @@ const Signup = () => {
               type="text"
               name="username"
               placeholder=""
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="emailopt">
@@ -34,6 +51,7 @@ const Signup = () => {
               type="email"
               name="email"
               placeholder="your@gmail.com"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="emailpass">
@@ -56,10 +74,13 @@ const Signup = () => {
               type="password"
               name="rePassword"
               placeholder="******"
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="emailbtn">
-            <button className="loginbtn" onClick={handlesignup} >Sign Up</button>
+            <button className="loginbtn"  type="submit">
+              Sign Up
+            </button>
           </div>
         </form>
       </div>
